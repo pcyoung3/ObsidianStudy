@@ -1,0 +1,15 @@
+{
+  "readableLineLength": false,
+  "livePreview": true,
+  "attachmentFolderPath": "./attachments",
+  "newFileLocation": "current",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A5",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 40
+  },
+  "alwaysUpdateLinks": true,
+  "spellcheck": false
+}
