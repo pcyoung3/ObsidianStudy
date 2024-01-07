@@ -10,4 +10,4 @@ null*
 .DS_Store
 
 # exclude specific folder
-06.CS/*
+06.CS/
