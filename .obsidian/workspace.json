@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "8f0a7b9bebd615ad",
+    "type": "split",
+    "children": [
+      {
+        "id": "7ff2e44600f3c984",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80a86d6e32dadb18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e852ece24d919c82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8481672ebbc16dd5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d0ba2e75af58989a",
+    "type": "split",
+    "children": [
+      {
+        "id": "784bb19a2a8427e1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5ba5639ba09b63f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2444dd39b8005395",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "3차원",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bed0f76619b0621f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "d5f564ff0dc81c2c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 315.5
+  },
+  "right": {
+    "id": "8c4eacb38da7b7ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "c63664b79bdf0ae5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d2233de732ec5ab6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "be3c33d739be6015",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "642bc9307ba8da21",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ac23e5a919e0d8a2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          },
+          {
+            "id": "2ba77977a398a938",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "e4533edb41cefeaf",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "e852ece24d919c82",
+  "lastOpenFiles": [
+    "Index.md",
+    "README.md",
+    "Study/99.etc/Files/Udemy 참고.md",
+    "Study/01.PS/Problems/Files/DP 백준10942 팰린드롬.md",
+    "Study/01.PS/PSIndex.md",
+    "Study/01.PS/Problems/Files/DP 백준1915 가장 큰 정사각형.md",
+    "Study/02.Unreal/UnrealIndex.md",
+    "Study/StudyIndex.md",
+    "Study/01.PS/Problems/Files/attachments/KakaoTalk_20240106_120614643.jpg",
+    "Obsidian/Files/CallOut.md",
+    "Study/01.PS/Problems/Files/attachments/KakaoTalk_20240106_120543952.jpg",
+    "Study/02.Unreal/Lecture/Files/이득우Framework_13_UI.md",
+    "Study/02.Unreal/Lecture/Files/이득우Framework_07_캐릭터 스텟과 위젯.md",
+    "Study/02.Unreal/Lecture/Files/이득우C++_11_언리얼 빌드 시스템.md",
+    "Study/02.Unreal/Project/Files/D1_프로젝트 정리.md",
+    "Study/01.PS/Problems/Files/attachments/KakaoTalk_20240105_115411671.jpg",
+    "Study/01.PS/Problems/Files/시뮬레이션_백준12100 2048(Easy).md",
+    "Study/01.PS/Theory/Files/바킹독_14_정렬.md",
+    "Study/01.PS/Theory/Files/바킹독_11_재귀.md",
+    "Study/01.PS/Theory/Files/바킹독_9_BFS.md",
+    "Study/01.PS/Problems/Files/DP 백준2240 자두나무.md",
+    "Study/01.PS/Problems/Files/시뮬레이션_백준13460 구슬 탈출 2.md",
+    "Study/01.PS/Problems/Files/스택_백준1874 스택수열.md",
+    "Study/01.PS/Problems/Files/시뮬레이션_백준14888 연산자 끼워넣기.md",
+    "Study/01.PS/Problems/Files/재귀_백준2630 색종이 만들기.md",
+    "Study/04.C++/CppIndex.md",
+    "Study/04.C++/Files/SOLID 원칙.md",
+    "Study/99.etc/Files/NAS Synology 셋팅.md",
+    "Study/02.Unreal/Project/Files/attachments/Pasted image 20240103161936.png",
+    "Study/02.Unreal/Project/Files/attachments/Pasted image 20240103161901.png",
+    "Study/02.Unreal/Project/Files/attachments/Pasted image 20240103161831.png",
+    "Study/01.PS/Problems/Files/백트래킹_백준15650 N과 M (2).md",
+    "Study/01.PS/Problems/Files/attachments/KakaoTalk_20231230_124559119.jpg",
+    "Study/02.Unreal/Project/Files/attachments/Pasted image 20231229132809.png",
+    "Study/02.Unreal/Project/Files/attachments/Pasted image 20231229132234.png",
+    "Study/02.Unreal/Project/Files/attachments",
+    "Study/06.CS/Files/넥토리얼_코딩테스트.pdf",
+    "Study/01.PS/Problems/Files/attachments/KakaoTalk_20231227_120137270.jpg",
+    "Study/02.Unreal/Project/Files",
+    "Study/02.Unreal/Project/새 폴더",
+    "Study/02.Unreal/Project",
+    "Study/02.Unreal/새 폴더",
+    "Obsidian/Untitled.canvas",
+    "Study/05.Graphics/Files",
+    "Study/03.DirectX9/Files/03_벡터행렬.pdf",
+    "Study/03.DirectX9/Files/01_C++정리.pdf",
+    "Study/06.CS/Files/넥토리얼.pdf"
+  ]
+}
