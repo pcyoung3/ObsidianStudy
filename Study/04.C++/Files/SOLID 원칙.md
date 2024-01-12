@@ -1,5 +1,8 @@
-# Index : [[CppIndex]]
-## Tag : #study #cpp
+---
+Index: "[[CppIndex]]"
+tags:
+  - Study
+  - cpp
 ---
    
 > [!question] SOLID 원칙이란?

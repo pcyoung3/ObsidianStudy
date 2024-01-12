@@ -1,5 +1,8 @@
-# Index : [[GraphicsIndex]]
-## Tag : #Study  #graphics 
+---
+Index: "[[GraphicsIndex]]"
+tags:
+  - Study
+  - graphics
 ---
    
 ## 1. 벡터의 기초

@@ -1,5 +1,8 @@
-# Index : [[EtcIndex]]
-## Tag : #Study 
+---
+Index: "[[EtcIndex]]"
+tags:
+  - Study
+  - etc
 ---
    
 Udemy 한글자막 보는 법 참고

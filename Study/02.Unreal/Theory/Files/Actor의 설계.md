@@ -1,5 +1,8 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - unreal
+  - Study
 ---
    
 > [!danger] Actor와 관련된 기본적인 부분 정리

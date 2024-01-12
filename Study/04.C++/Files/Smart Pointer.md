@@ -1,5 +1,8 @@
-# Index : [[CppIndex]]
-## Tag : #study #cpp
+---
+Index: "[[CppIndex]]"
+tags:
+  - Study
+  - cpp
 ---
    
 > [!bug] C 기반의 Raw pointer에서 일어나는 여러가지 문제점을 해소하기 위해 나온 포인터

@@ -1,5 +1,10 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - work
+  - unreal
+  - Study
+  - cpp
 ---
    
 > [!note] Serialization(직렬화)의 개념
@@ -7,7 +12,7 @@
 
 ## 1. Serialization 의 개념
 ---
-![[Pasted image 20230525113543.png|1100]]
+![[Pasted image 20230525113543.png]]
 ![[Pasted image 20230525114248.png]]
    
    

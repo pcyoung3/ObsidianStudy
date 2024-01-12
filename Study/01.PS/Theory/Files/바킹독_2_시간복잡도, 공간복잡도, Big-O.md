@@ -1,5 +1,10 @@
-# Index : [[PSIndex]]
-## Tag : #PS
+---
+Index: "[[PSIndex]]"
+tags:
+  - Study
+  - PS
+Algorithm_type:
+  - time_complexity
 ---
    
 > [!INFO] 시간복잡도

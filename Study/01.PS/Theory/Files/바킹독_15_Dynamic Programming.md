@@ -1,5 +1,10 @@
-# Index : [[PSIndex]]
-## Tag : #Study #PS
+---
+Index: "[[PSIndex]]"
+tags:
+  - Study
+  - PS
+Algorithm_type:
+  - DP
 ---
 
 > [!note] DP에 관한 문서

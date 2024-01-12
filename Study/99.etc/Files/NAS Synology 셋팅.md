@@ -1,5 +1,8 @@
-# Index : [[EtcIndex]]
-## Tag : #Study 
+---
+Index: "[[EtcIndex]]"
+tags:
+  - Study
+  - etc
 ---
    
 > [!danger] 주의사항

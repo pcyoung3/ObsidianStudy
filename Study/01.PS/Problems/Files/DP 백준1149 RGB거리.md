@@ -1,5 +1,10 @@
-# Index : [[PSIndex]]
-## Tag : #Study #PS #DP
+---
+Index: "[[PSIndex]]"
+tags:
+  - Study
+  - PS
+Algorithm_type:
+  - DP
 ---
 
 ## 문제

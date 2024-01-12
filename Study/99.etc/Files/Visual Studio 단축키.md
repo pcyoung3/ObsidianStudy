@@ -1,5 +1,9 @@
-# Index : [[EtcIndex]]
-## Tag : #Study #shortcut
+---
+Index: "[[EtcIndex]]"
+tags:
+  - Study
+  - etc
+  - shortcut
 ---
    
 ## 에디터 기능

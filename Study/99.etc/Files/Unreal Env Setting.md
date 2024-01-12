@@ -1,5 +1,8 @@
-# Index : [[EtcIndex]]
-## Tag : #Study 
+---
+Index: "[[EtcIndex]]"
+tags:
+  - Study
+  - etc
 ---
 
 ## 1. VS 들여쓰기 셋팅

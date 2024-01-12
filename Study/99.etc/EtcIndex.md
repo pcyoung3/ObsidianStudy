@@ -1,5 +1,8 @@
-# Index : [[StudyIndex]]
-## Tag : #etc
+---
+Index: "[[StudyIndex]]"
+tags:
+  - Study
+  - etc
 ---
    
    

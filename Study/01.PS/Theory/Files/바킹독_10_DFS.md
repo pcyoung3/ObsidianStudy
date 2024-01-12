@@ -1,5 +1,10 @@
-# Index : [[PSIndex]]
-## Tag : #Study #PS
+---
+Index: "[[PSIndex]]"
+tags:
+  - Study
+  - PS
+Algorithm_type:
+  - DFS
 ---
 
 > [!note] 다차원 배열에서 각 칸을 방문할 때 깊이를 우선으로 방문하는 알고리즘

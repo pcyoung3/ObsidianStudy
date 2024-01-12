@@ -1,5 +1,10 @@
-# Index : [[PSIndex]]
-## Tag : #PS
+---
+Index: "[[PSIndex]]"
+tags:
+  - Study
+  - PS
+Algorithm_type:
+  - etc
 ---
    
 바킹독 블로그 + kks227 블로그 + 단계별로 풀어보기(~35) + solved 클래스(~5)

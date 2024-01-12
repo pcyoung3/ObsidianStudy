@@ -1,5 +1,8 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal #Study 
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - unreal
+  - Study
 ---
    
 ## 1. 행동트리 기본 이론

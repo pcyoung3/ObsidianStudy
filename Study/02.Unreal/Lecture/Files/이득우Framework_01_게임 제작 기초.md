@@ -1,5 +1,9 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - work
+  - unreal
+  - Study
 ---
    
 > [!note] 언리얼 게임 제작 시 기초

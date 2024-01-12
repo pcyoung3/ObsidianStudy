@@ -1,5 +1,8 @@
-# Index : [[CppIndex]]
-## Tag : #study #cpp
+---
+Index: "[[CppIndex]]"
+tags:
+  - Study
+  - cpp
 ---
    
 > [!tip] Modern Cpp에서 추가된 개념 중 중요한 Rvalue Lvalue 에 관해 서술

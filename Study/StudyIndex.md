@@ -1,5 +1,9 @@
-# Index : [[Index]]
-## Tag : #index 
+---
+Index: "[[Index]]"
+tags:
+  - index
+  - Study
+---
 
 ```dataview
 table file.cday as "생성날짜"

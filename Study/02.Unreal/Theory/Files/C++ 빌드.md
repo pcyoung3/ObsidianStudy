@@ -1,5 +1,8 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - unreal
+  - Study
 ---
 
 > [!note] 언리얼에서 c++로 작업할 때 변경점 적용하는 법

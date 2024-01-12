@@ -1,5 +1,9 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal #Study 
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - work
+  - unreal
+  - Study
 ---
    
 참고 : [[이득우Framework_11_행동트리 모델의 이해]]

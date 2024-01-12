@@ -1,5 +1,9 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - work
+  - unreal
+  - Study
 ---
    
 ## 1. 애니메이션 몽타주란?

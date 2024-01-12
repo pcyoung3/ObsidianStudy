@@ -1,5 +1,8 @@
-# Index : [[UnrealIndex]]
-## Tag : #work #unreal
+---
+Index: "[[UnrealIndex]]"
+tags:
+  - unreal
+  - Study
 ---
 
 > [!note] C++에서 선언한 변수를 Editor에서 수정
