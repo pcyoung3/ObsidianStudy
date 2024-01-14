@@ -1,5 +1,7 @@
 ---
-Index: "[[PSIndex]]"
+Index:
+  - "[[PSIndex]]"
+  - "[[바킹독_15_Dynamic Programming]]"
 tags:
   - Study
   - PS

@@ -1,0 +1,14 @@
+---
+Index: "[[StudyIndex]]"
+tags:
+  - Study
+  - CS
+---
+   
+   
+# 목차
+```dataview
+table file.cday as "생성날짜"
+from "Study/06.CS/Files"
+sort file.ctime asc
+```

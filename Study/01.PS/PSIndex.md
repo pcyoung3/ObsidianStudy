@@ -1,10 +1,9 @@
 ---
-Index: "[[PSIndex]]"
+Index:
+  - "[[StudyIndex]]"
 tags:
   - Study
   - PS
-Algorithm_type:
-  - Input_Output
 ---
    
    
@@ -12,26 +11,27 @@ Algorithm_type:
 ```dataview
 table file.cday as "생성날짜"
 from "Study/01.PS/Theory"
+sort file.cday asc
 FLATTEN Algorithm_type as Type
 SORT default(((x) => {
 "Input_Output": 1,
-"Data_Type": 1,
-"time_complexity":1,
-"array":2,
-"linked_list": 3,
-"stack": 4,
-"queue": 4,
-"deque": 4,
-"BFS": 6,
-"DFS": 7,
-"recursive": 8,
-"backtracking": 9,
-"simulation": 10,
-"sort": 10,
-"DP": 11,
-"greedy": 12,
-"brute force": 13
-}[x])(Type), "99") ASC
+"Data_Type": 2,
+"time_complexity":3,
+"array":4,
+"linked_list": 5,
+"stack": 6,
+"queue": 7,
+"deque": 8,
+"BFS": 9,
+"DFS": 10,
+"recursive": 11,
+"backtracking": 12,
+"simulation": 13,
+"sort": 14,
+"DP": 15,
+"greedy": 16,
+"brute force": 17
+}[x])(Type), "99") asc
 ```
    
    
