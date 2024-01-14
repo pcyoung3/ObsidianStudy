@@ -26936,7 +26936,7 @@ const applyEditScript = (textEditor, script, rowOffset) => {
 };
 exports.applyEditScript = applyEditScript;
 /**
- * Linked list used to remember edit script.
+ * linked_list used to remember edit script.
  *
  * @private
  */

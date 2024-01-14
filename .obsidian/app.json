@@ -11,5 +11,6 @@
     "downscalePercent": 40
   },
   "alwaysUpdateLinks": true,
-  "spellcheck": false
+  "spellcheck": false,
+  "showLineNumber": false
 }

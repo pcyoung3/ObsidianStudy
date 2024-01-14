@@ -1,0 +1,9 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Index": "multitext",
+    "Algorithm_type": "multitext"
+  }
+}
