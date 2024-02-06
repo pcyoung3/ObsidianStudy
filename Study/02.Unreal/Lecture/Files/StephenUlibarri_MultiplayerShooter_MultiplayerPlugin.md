@@ -1,5 +1,6 @@
 ---
-Index: "[[UnrealIndex]]"
+Index:
+  - "[[UnrealIndex]]"
 tags:
   - work
   - unreal
@@ -22,4 +23,6 @@ tags:
 
 ---
 41강 Seamless Travel and Lobby : Travel에 관해 설명
-42강 Network Role : 보충 필
+42강 Network Role : 보충 필요
+46강 Variable Replication
+48강 Remote Procedure call

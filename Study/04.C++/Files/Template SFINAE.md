@@ -77,7 +77,7 @@ enable_if를 호출하면
 1. template 에 자료형을 정하는 상황
 ```cpp
 //template에 자료형을 미리 정해줄 수 있다.
-template <typename T, bool TestBool>
+template <bool TestBool, typename T>
 struct TestStruct
 {
 	void Test()
@@ -89,22 +89,24 @@ struct TestStruct
 
 void main()
 {
-	TestStruct<int, true> FTest;
+	TestStruct<true, int> FTest;
 	FTest.Test();   // "TestBool is True" 출력
 
-	TestStruct<int, false> FTestFalse;
+	TestStruct<false, int> FTestFalse;
 	FTestFalse.Test();  // 아무것도 출력안함
 }
 ```
    
 2. template에 자료형을 정하고 오버로딩을 추가한 상황
 ```cpp
-template <typename T, bool TestBool>
+//class T = void 는 Default 매개변수
+template <bool TestBool, class T = void>
 struct TestStruct
 { };
 
-template<typename T>
-struct TestStruct<T, true> //오버로딩
+//앞에 조건이 참일 때만 들어옴
+template <class T>
+struct TestStruct<true, T> //오버로딩
 {
 	void Test()
 	{
@@ -114,10 +116,10 @@ struct TestStruct<T, true> //오버로딩
 
 void main()
 {
-	TestStruct<int, true> FTest;
+	TestStruct<true, int> FTest;
 	FTest.Test();   // "TestBool is True" 출력
 
-	TestStruct<int, false> FTestFalse;
+	TestStruct<false, int> FTestFalse;
 	FTestFalse.Test();  // 오류발생
 }
 ```
@@ -149,7 +151,6 @@ typename enable_if<!std::is_integral<T>::value>::type println_point(const Point<
 	cout << point.name << '<' << typeid(T).name() << '>' << " = non-integral point(" << point.x << ", " << point.y << ")" << endl;
 }
 
-//return 값이 있다면 이런 방식으로 사용
 //int형일 때
 template <typename T, typename std::enable_if<std::is_integral<T>::value>::type* = nullptr>
 bool Check_Integral(const Point<T>& point)
@@ -186,6 +187,8 @@ void main()
 		cout << p2.name << " is Not Integral" << "\n";
 }
 ```
+> [!tip] 코드상세설명
+> ![[KakaoTalk_20240118_132508524.jpg]]
    
 ### 2-2. 결과
 ```

@@ -1,5 +1,6 @@
 ---
-Index: "[[CppIndex]]"
+Index:
+  - "[[CppIndex]]"
 tags:
   - Study
   - cpp
@@ -10,16 +11,17 @@ tags:
 ## 1. Lvalue? Rvalue?
 ---
 ### 1-1. Lvalue
-Lvalue 는 주소값을 가질 수 있는 값을 의미한다.
+Lvalue 표현식 이후에도 사라지지 않는 값.
 지금까지 사용해왔던 변수는 보통 Lvalue라고 생각하면 된다.
    
 ### 1-2. Rvalue
-Rvalue는 주소값을 가질 수 없는 값을 의미한다.
+Rvalue는 표현식 이후에 사라지는 값들.
 일반적으로는 상수값, 임시객체, 람다 등 다음줄이면 없어질 값들을 말한다
 ```cpp
 int a = 3; //a는 lvalue, 3은 rvalue
 customclass A = customclass(1); // A는 lvalue, 임시객체인 오른쪽은 rvalue
 ```
+좀 더 세세한 값의 체계는 다음을 참고 [[auto와 decltype#2. C++의 값의 종류(value Category)|value category]]
    
    
 ## 2. 이동연산자 및 이동생성자
@@ -33,48 +35,69 @@ c++11 부터 이동연산자를 이용하여 객체의 Default 로 생성되는 
 
 |                    복사                    |                     이동                     |
 |:------------------------------------------:|:--------------------------------------------:|
-| ![[KakaoTalk_20230613_183343437.jpg\|390]] | ![[KakaoTalk_20230613_183359997 2.jpg\|450]] |
+| ![[KakaoTalk_20230613_183343437.jpg]] | ![[KakaoTalk_20230613_183359997 2.jpg]] |
    
 ### 2-3. 코드
 ```cpp
 class Person
 {
 public:
-	Person() 
-	{ 
+	Person()
+	{
 		value = new int(1);
-		cout << "생성자" << endl; 
+		std::cout << "생성자" << std::endl;
 	}
-	~Person() 
-	{ 
+
+	~Person()
+	{
 		delete value;
-		cout << "소멸자" << endl; 
+		std::cout << "소멸자" << std::endl;
 	}
+
 	Person(const Person& _p)
 	{
 		value = new int;
 		*value = *_p.value;	//깊은복사
-		cout << "복사생성자 호출" << endl;
+		std::cout << "복사생성자 호출" << std::endl;
 	}
+
 	Person(Person&& _p) noexcept
 	{
 		value = _p.value;	//얕은복사
 		_p.value = nullptr;	//임시객체 삭제될 시 원본값 사라지지 않게 pointer 초기화
-		cout << "이동생성자 호출" << endl;
+		std::cout << "이동생성자 호출" << std::endl;
 	}
-	void test() { cout << "This is Test\n"; }
-	
+
+	Person& operator=(const Person& _p)
+	{
+		value = new int;
+		*value = *_p.value;
+		std::cout << "대입연산자 호출" << std::endl;
+		return *this;
+	}
+
+	Person& operator=(Person&& _p) noexcept
+	{
+		value = _p.value;
+		_p.value = nullptr;
+		std::cout << "이동대입연산자 호출" << std::endl;
+		return *this;
+	}
+
+	void test() { std::cout << "This is Test\n"; }
+
 private:
 	int* value;
 };
+
 void main()
 {
 	Person p = Person();	//생성자
-	cout << "---------------------" << endl;
+	std::cout << "---------------------" << std::endl;
 	Person copyPerson = Person(p);	//복사생성자
-	cout << "---------------------" << endl;
+	std::cout << "---------------------" << std::endl;
 	Person movePerson = Person(std::move(p));	//이동생성자
-	cout << "---------------------" << endl;
+	std::cout << "---------------------" << std::endl;
 }
 ```
    
@@ -121,27 +144,36 @@ public:
 	{
 		value = _p.value;	//얕은복사
 		_p.value = nullptr;	//임시객체 삭제될 시 원본값 사라지지 않게 pointer 초기화
-		cout << "이동생성자 호출" << endl;
+		std::cout << "이동생성자 호출" << std::endl;
 	}
 	...
 };
 
 Person CreatePerson()
 {
-	Person temp = Person();
-	return temp;
+	return Person(); //일반생성자 호출
 }
+
 void main()
 {
-	Person MovePerson = CreatePerson();	//이동생성자 호출
+	Person MovePerson1 = CreatePerson();  //아무 생성자도 호출하지 않고 그대로 값복사됨 -> 복사생성자도 아님
 
-	vector<Person> vec;
+	Person MovePerson2 = std::move(CreatePerson());	//이동생성자호출
+
+	Person MovePerson3;
+	MovePerson3 = CreatePerson();	//이동대입연산자 호출
+
+	std::vector<Person> vec;
 	vec.push_back(Person());	//이동생성자 호출
 }
 ```
-이동생성자가 2곳에서 호출
-1) CreatePerson() 함수에서 생성(지역변수) 후 return 값이 임시객체이므로 MovePerson에 대입할 때 이동생성자가 호출
-2) stl에서 사용되는 함수에 임시객체를 넣었을 경우 이동생성자가 호출
+
+코드설명
+1) MovePerson1의 경우 CreatePerson() 함수에서 return 되는 것은 임시객체이지만 그걸 그대로 받아서 집어넣어서 추가로 생성자 호출이 없음
+2) MovePerson2의 경우 std::move를 이용해서 이동연산을 했기 때문에 이동생성자 호출
+3) MovePerson2의 경우 생성자에 바로 넣은 것이 아니라 이미 주소가 할당된 상황에서 임시객체를 넣었으므로 이동대입연산자가 호출됨
+	(이동대입연산자가 정의가 안되어있으면 대입연산자 호출)
+4) stl에서 사용되는 함수에 임시객체를 넣었을 경우 이동생성자가 호출
 
 > [!tip] 
 return 할때 또는 매개변수로 전달할 때 복사생성자가 호출되었지만 이제 이동연산자가 생성되는걸로 바뀌어서 생기는 이점은 비용이 큰 동적할당 연산을 줄일 수 있는 것이다.
@@ -149,8 +181,7 @@ return 할때 또는 매개변수로 전달할 때 복사생성자가 호출되�
 > [!danger] 정리
 > 이동생성자가 호출되는 경우
 > 1. std::move() 함수를 통해 객체생성
-> 2. 함수에서 return 값을 받아서 객체생성
-> 3. STL에 인자로 객체를 넘길 때
+> 2. STL에 인자로 객체를 넘길 때
    
    
 ## 4. std::move, std::forward
@@ -188,9 +219,9 @@ Person wrapper(T&& input) //이 부분이 Universal Reference
 	return input;
 }
 
-void valueTest(Person& _input) { cout << "lValue" << endl; }
-void valueTest(const Person& _input) { cout << "const lValue" << endl; }
-void valueTest(Person&& _input) { cout << "RValue" << endl; }
+void valueTest(Person& _input) { std::cout << "lValue" << std::endl; }
+void valueTest(const Person& _input) { std::cout << "const lValue" << std::endl; }
+void valueTest(Person&& _input) { std::cout << "RValue" << std::endl; }
 
 void main()
 {
@@ -246,3 +277,74 @@ class vector<TestClass, allocator<testClass>> {
 push_back의 경우 이미 타입추론이 끝난상황이기 때문에 Rvalue를 인자값으로 받는 것이지 Universal Reference가 아니다
 emplace_back의 경우 class의 타입추론과 상관없이 함수를 호출할 때 타입추론이 발생한다.
 또한 그 타입은 T&& 형식과 같기 때문에 emplace의 경우 Universal Reference 형식으로 매개변수를 받는다.
+
+> [!note] 또 다른 차이점
+> emplace_back의 경우 보면 `class...` 인 구문이 있는데, 이는 가변인자를 받는다는 것이다. [[Template 심화문법#3. 가변길이 Template | 가변길이 Template 참고]]
+> 따라서 push_back에 객체를 전달한다면 임시객체나 복사생성자를 이용해서 넣어야 한다
+> 하지만 emplace_back은 해당 객체의 생성자의 인자값들을 전달해줄 수 있기 때문에 안쪽에서 생성자를 한번만 호출하게 됨
+#### 예제코드
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+class A
+{
+public:
+	A() 
+	{
+		a = 0;
+		b = 0;
+		c = 0;
+		cout << "생성자 호출" << endl;
+	}
+	~A()
+	{
+		cout << "소멸자 호출" << endl;
+	}
+	A(int _a, int _b, int _c) : a(_a), b(_b), c(_c)
+	{ 
+		cout << "생성자 호출" << endl;
+	}
+
+	A(const A& _input)
+	{
+		a = _input.a;
+		b = _input.b;
+		c = _input.c;
+		cout << "복사생성자 호출" << endl;
+	}
+
+	A(A&& _input) noexcept
+	{
+		a = _input.a;
+		b = _input.b;
+		c = _input.c;
+		cout << "이동생성자 호출" << endl;
+	}
+
+private:
+	int a = 0;
+	int b = 0;
+	int c = 0;
+};
+void main()
+{
+	std::vector<A> v1, v2;
+	v1.emplace_back(1, 2, 3); //바로 생성자를 넣어줄 수 있음
+	cout << "----------------------------" << endl;
+	v2.push_back(A(3, 4, 5)); //생성자 바로 넣는 것이 안되고 임시객체를 이용해줘야 함
+	cout << "----------------------------" << endl;
+}
+```
+   
+#### 출력
+```
+생성자 호출
+----------------------------
+생성자 호출
+이동생성자 호출
+소멸자 호출
+----------------------------
+소멸자 호출
+소멸자 호출
+```
