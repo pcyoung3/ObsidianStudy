@@ -1,5 +1,5 @@
 ---
-Index: "[[EtcIndex]]"
+Index: "[[99. EtcIndex]]"
 tags:
   - Study
   - etc

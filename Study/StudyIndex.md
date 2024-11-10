@@ -10,7 +10,7 @@ table file.cday as "생성날짜"
 from "Study"
 where contains(file.name, "Index")
 where !contains(file.name, "StudyIndex")
-sort file.ctime asc
+sort file.name asc
 ```
    
    
